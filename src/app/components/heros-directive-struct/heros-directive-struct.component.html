@@ -1,0 +1,37 @@
+<div class="container">
+	<h1>Registro de heroes</h1>
+	<input [(ngModel)]="textoInput" type="text" [(ngModel)]="heroeIngresado" />
+	<button #miBoton *ngIf="showButtonSave" (click)="addHero()">GUARDAR</button>
+	<!--
+  <ul>
+    <li *ngFor="let hero of miArrayHeroes; trackBy:trackByHero">
+      {{hero.name}}
+    </li>
+  </ul>
+  <button (click)="modify()">MODIFY</button> -->
+
+	<table>
+		<tr>
+			<td>#</td>
+			<td>Heroe</td>
+			<td>Indice</td>
+			<td>accion</td>
+		</tr>
+		<tr *ngFor="let hero of miArrayHeroes; let indice = index; trackBy: trackByHero">
+			<td>{{ hero.id }}</td>
+			<td>{{ hero.name }}</td>
+			<td>{{ indice }}</td>
+			<td><button (click)="modifyHero(hero)">seleccionar</button></td>
+		</tr>
+	</table>
+	<div [ngSwitch]="heroeSeleccionado.id">
+		<h3 *ngSwitchCase="3">ESTE HEROE ES EL MAS COOL!!</h3>
+	</div>
+
+	<label for="" *ngIf="showButtonSave; else templadeFuckyn">Demostracion Template</label>
+
+	<ng-template #templadeFuckyn>
+		<h4>Hola, soy un Template</h4>
+	</ng-template>
+</div>
+<br />
