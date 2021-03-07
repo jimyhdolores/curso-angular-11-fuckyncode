@@ -85,7 +85,7 @@ export class HerosDirectiveStructComponent implements OnInit, AfterViewInit {
 		];
 	}
 
-	trackByHero(hero: IHeroe): number {
+	trackByHero(index: number, hero: IHeroe): number {
 		return hero.id;
 	}
 }
