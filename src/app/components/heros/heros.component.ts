@@ -15,7 +15,7 @@ export class HerosComponent implements OnInit, AfterViewInit {
 	decimalPrueba = 0.589;
 	currencyNumber = 1000;
 	myJson = { name: 'fuckynCode', channel: 'yotube' };
-	miPromesa = new Promise((resolve, reject) => {
+	miPromesa = new Promise((resolve) => {
 		setTimeout(() => {
 			resolve('esto es una promesa');
 		}, 3000);
