@@ -3,9 +3,10 @@
 		<button mat-mini-fab color="accent" aria-label="Example icon button with a menu icon">
 			<mat-icon>add</mat-icon>
 		</button>
-		<mat-icon matBadge="15" matBadgeColor="warn">desktop_windows</mat-icon>
+		<mat-icon [matBadge]="countTv" matBadgeColor="warn">desktop_windows</mat-icon>
 	</div>
 	<div class="container__cards">
+		<app-card-tv></app-card-tv>
 		<app-card-tv></app-card-tv>
 	</div>
 </div>

@@ -23,18 +23,19 @@
 
 	<div class="container__rack">
 		<span>Rack</span>
-		<mat-slide-toggle class="example-margin"> </mat-slide-toggle>
+		<mat-slide-toggle class="example-margin" [(ngModel)]="optionsTv.rack"> </mat-slide-toggle>
 	</div>
 
 	<mat-form-field appearance="outline">
 		<mat-label>Tamaño</mat-label>
-		<mat-select>
+		<mat-select [(ngModel)]="optionsTv.tamanio" (selectionChange)="changeTamanio()">
 			<mat-option *ngFor="let size of sizes" [value]="size">{{ size }}</mat-option>
 		</mat-select>
 	</mat-form-field>
+
 	<mat-form-field appearance="outline">
 		<mat-label>Resolución</mat-label>
-		<mat-select>
+		<mat-select [(ngModel)]="optionsTv.resolution" (selectionChange)="changeResolution()">
 			<mat-option *ngFor="let resolution of resolutions" [value]="resolution">{{
 				resolution
 			}}</mat-option>

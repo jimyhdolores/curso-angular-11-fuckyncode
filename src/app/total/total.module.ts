@@ -5,6 +5,7 @@ import { TotalComponent } from './total.component';
 @NgModule({
 	declarations: [TotalComponent],
 	imports: [CommonModule],
-	exports: [TotalComponent]
+	exports: [TotalComponent],
+	providers: []
 })
 export class TotalModule {}
