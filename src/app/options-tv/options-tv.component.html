@@ -1,0 +1,44 @@
+<div class="container">
+	<div class="container__tv">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			[style.fill]="'black'"
+			width="100%"
+			height="100%"
+		>
+			<path d="M0 0h24v24H0z" fill="none" />
+			<path
+				d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z"
+			/>
+		</svg>
+	</div>
+	<span>Color 🎨</span>
+	<div class="container__color">
+		<color-circle
+			[colors]="colors"
+			(onChangeComplete)="handleChangeComplete($event)"
+		></color-circle>
+	</div>
+
+	<div class="container__rack">
+		<span>Rack</span>
+		<mat-slide-toggle class="example-margin"> </mat-slide-toggle>
+	</div>
+
+	<mat-form-field appearance="outline">
+		<mat-label>Tamaño</mat-label>
+		<mat-select>
+			<mat-option *ngFor="let size of sizes" [value]="size">{{ size }}</mat-option>
+		</mat-select>
+	</mat-form-field>
+	<mat-form-field appearance="outline">
+		<mat-label>Resolución</mat-label>
+		<mat-select>
+			<mat-option *ngFor="let resolution of resolutions" [value]="resolution">{{
+				resolution
+			}}</mat-option>
+		</mat-select>
+	</mat-form-field>
+	<app-total></app-total>
+</div>

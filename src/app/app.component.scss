@@ -1,7 +1,17 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	min-height: 50vh;
+	padding: 5em;
+	gap: 3em;
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 1em;
+	}
+
+	&__cards {
+		display: flex;
+		gap: 1em;
+	}
 }

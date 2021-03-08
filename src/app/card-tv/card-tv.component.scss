@@ -1,0 +1,12 @@
+.card {
+	width: 15em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	span {
+		font-weight: bold;
+	}
+}
+.mat-card > :first-child {
+	text-align: center;
+}

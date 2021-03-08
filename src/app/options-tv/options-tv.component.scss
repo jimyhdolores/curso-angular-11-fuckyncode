@@ -1,0 +1,25 @@
+::ng-deep {
+	.mat-form-field-wrapper {
+		padding-bottom: 0em !important;
+		margin-bottom: 0em !important;
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	&__rack {
+		span {
+			margin-right: 1em;
+		}
+	}
+	&__tv {
+		height: 10em;
+	}
+
+	span {
+		font-weight: 600;
+	}
+}
