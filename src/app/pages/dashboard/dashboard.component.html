@@ -1,0 +1,12 @@
+<div>
+	<app-header></app-header>
+	<mat-drawer-container class="drawer" autosize>
+		<mat-drawer #drawer mode="side" opened>
+			<app-menu></app-menu>
+		</mat-drawer>
+
+		<div class="sidenav-content">
+			<router-outlet></router-outlet>
+		</div>
+	</mat-drawer-container>
+</div>

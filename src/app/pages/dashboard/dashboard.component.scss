@@ -1,0 +1,16 @@
+.sidenav-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2em;
+	gap: 2em;
+	&__filter {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.drawer {
+	height: 100%;
+}

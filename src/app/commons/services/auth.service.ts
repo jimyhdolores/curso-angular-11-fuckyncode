@@ -20,7 +20,7 @@ export class AuthService {
 			);
 	}
 
-	private errorHandler(error: any) {
+	private errorHandler(error: HttpErrorResponse) {
 		if (error instanceof HttpErrorResponse) {
 			if (error.error instanceof ErrorEvent) {
 				// client-side error
