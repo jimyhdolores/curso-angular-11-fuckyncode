@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JwtModule } from '@auth0/angular-jwt';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthComponentsModule } from './commons/shared/auth-components.module';
+import { AuthModule } from './pages/auth/auth.module';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -12,7 +13,8 @@ import { AuthComponentsModule } from './commons/shared/auth-components.module';
 		BrowserModule,
 		BrowserAnimationsModule,
 		HttpClientModule,
-		AuthComponentsModule,
+		AuthModule,
+		AppRoutingModule,
 		JwtModule.forRoot({
 			config: {
 				tokenGetter: function getItem() {

@@ -6,8 +6,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DigimonsComponent } from './dashboard/digimons/digimons.component';
 import { MedabotsComponent } from './dashboard/medabots/medabots.component';
 import { PokemonsComponent } from './dashboard/pokemons/pokemons.component';
+import { DashBoardRoutingModule } from './page-routing.module';
 @NgModule({
 	declarations: [DashboardComponent, PokemonsComponent, DigimonsComponent, MedabotsComponent],
-	imports: [CommonModule, MatSidenavModule, DashboardComponentsModule]
+	imports: [CommonModule, MatSidenavModule, DashboardComponentsModule, DashBoardRoutingModule]
 })
 export class PageModule {}

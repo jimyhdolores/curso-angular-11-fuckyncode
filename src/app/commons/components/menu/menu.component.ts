@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 	listMenu = [
-		{ name: 'User', path: '/dashboard/users', icon: 'account_circle' },
-		{ name: 'Albums', path: '/dashboard/albums', icon: 'star_rate' },
-		{ name: 'Posts', path: '/dashboard/posts', icon: 'article' }
+		{ name: 'Pokemons', path: '/dashboard/pokemons', icon: 'account_circle' },
+		{ name: 'Medabots', path: '/dashboard/medabots', icon: 'star_rate' },
+		{ name: 'Digimons', path: '/dashboard/digimons', icon: 'article' }
 	];
 }

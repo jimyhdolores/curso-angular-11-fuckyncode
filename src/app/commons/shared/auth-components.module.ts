@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { RouterModule } from '@angular/router';
 import { LoginComponent } from '../components/login/login.component';
 import { RegisterComponent } from '../components/register/register.component';
 
@@ -16,7 +17,8 @@ import { RegisterComponent } from '../components/register/register.component';
 		MatFormFieldModule,
 		MatIconModule,
 		MatInputModule,
-		FormsModule
+		FormsModule,
+		RouterModule
 	],
 	exports: [LoginComponent, RegisterComponent]
 })
