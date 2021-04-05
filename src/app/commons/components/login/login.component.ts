@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { IRQLogin } from './../../models/auth';
 
 @Component({
 	selector: 'app-login',
@@ -7,13 +9,17 @@ import { Router } from '@angular/router';
 	styleUrls: ['../../scss/auth.component.scss']
 })
 export class LoginComponent {
-	constructor(private router: Router) {}
+	constructor(private router: Router, private loginService: AuthService) {}
 
 	userName = 'john';
 	password = '123456';
 
 	clickLogin(): void {
-		void this.router.navigateByUrl('/dashboard');
+		const user: IRQLogin = { username: this.userName, password: this.password };
+		this.loginService.login(user).subscribe((data) => {
+			console.log(data);
+		});
+		// void this.router.navigateByUrl('/dashboard');
 	}
 
 	onClickRegister(): void {

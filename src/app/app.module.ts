@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,6 +14,7 @@ import { AuthModule } from './pages/auth/auth.module';
 		BrowserAnimationsModule,
 		AuthModule,
 		AppRoutingModule,
+		HttpClientModule,
 		JwtModule.forRoot({
 			config: {
 				tokenGetter: function getItem() {

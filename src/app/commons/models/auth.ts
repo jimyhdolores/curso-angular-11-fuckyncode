@@ -7,3 +7,8 @@ export interface IRegister {
 	password: string;
 	repeatPassword: string;
 }
+
+export interface IRQLogin {
+	username: string;
+	password: string;
+}
