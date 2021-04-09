@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { IRQLogin } from './../models/auth';
+import { IRLogin, IRQLogin } from './../models/auth';
 import { PathRest } from './../static/path-rest';
 
 @Injectable({
@@ -10,9 +10,9 @@ import { PathRest } from './../static/path-rest';
 })
 export class AuthService {
 	constructor(private http: HttpClient) {}
-
-	login(login: IRQLogin): Observable<IRQLogin> {
-		return this.http.post<IRQLogin>(PathRest.GET_LOGIN, login).pipe(
+	//CHIKIS EN EL VIDEO POR ERROR PUSE EL MISMO MODELO DE DATOS COMO "RESPUESTA" PERO DEBERIA SER "IRLogin", MIL DISCULPAS
+	login(login: IRQLogin): Observable<IRLogin> {
+		return this.http.post<IRLogin>(PathRest.GET_LOGIN, login).pipe(
 			catchError((error) => {
 				console.log('Error en AuthService', error);
 				return this.herrorHandler(error);
