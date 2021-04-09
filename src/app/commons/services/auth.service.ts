@@ -20,7 +20,7 @@ export class AuthService {
 		);
 	}
 
-	herrorHandler(error: HttpErrorResponse) {
+	herrorHandler(error: HttpErrorResponse): Observable<never> {
 		if (error instanceof HttpErrorResponse) {
 			if (error.error instanceof ErrorEvent) {
 				console.log('ERROR DE CLIENTE');
