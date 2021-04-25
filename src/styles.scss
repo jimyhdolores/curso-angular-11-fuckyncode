@@ -15,4 +15,25 @@ body {
 		justify-content: center;
 		height: 100%;
 	}
+	/*Clases para el SnackBar*/
+	.mat-snack-bar-container {
+		color: white;
+		text-align: center;
+	}
+	.mat-simple-snackbar {
+		justify-content: center;
+		font-size: 1em;
+	}
+	.snackbar-error {
+		background-color: #e74c3c;
+	}
+
+	.snackbar-warning {
+		background-color: #f1c40f;
+	}
+
+	.snackbar-info {
+		background-color: #239b56;
+	}
+	/****************************/
 }

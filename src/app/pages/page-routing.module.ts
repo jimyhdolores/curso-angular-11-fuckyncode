@@ -21,6 +21,11 @@ export const routes: Routes = [
 			{
 				path: 'medabots',
 				component: MedabotsComponent
+			},
+			{
+				path: '',
+				redirectTo: 'pokemons',
+				pathMatch: 'full'
 			}
 		]
 	}

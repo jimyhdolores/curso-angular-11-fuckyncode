@@ -16,10 +16,10 @@ export class LoginComponent {
 
 	clickLogin(): void {
 		const user: IRQLogin = { username: this.userName, password: this.password };
-		this.loginService.login(user).subscribe((data) => {
-			console.log(data);
-		});
-		// void this.router.navigateByUrl('/dashboard');
+		// this.loginService.login(user).subscribe((data) => {
+		// 	void this.router.navigateByUrl('/dashboard');
+		// });
+		void this.router.navigateByUrl('/dashboard');
 	}
 
 	onClickRegister(): void {
