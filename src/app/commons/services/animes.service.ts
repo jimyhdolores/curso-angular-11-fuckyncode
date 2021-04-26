@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { IAnime } from './../models/auth';
 import { TypeAnime } from './../models/types';
 import { PathRest } from './../static/path-rest';
 
@@ -7,8 +9,8 @@ import { PathRest } from './../static/path-rest';
 export class AnimesService {
 	constructor(private httpClient: HttpClient) {}
 
-	getAnime(anime: TypeAnime) {
+	getAnime(anime: TypeAnime): Observable<IAnime[]> {
 		const path = PathRest.GET_ANIME + '/' + anime;
-		return this.httpClient.get(path);
+		return this.httpClient.get<IAnime[]>(path);
 	}
 }

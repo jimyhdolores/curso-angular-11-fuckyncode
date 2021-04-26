@@ -1,23 +1,15 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IRLogin, IRQLogin } from './../models/auth';
-import { PathRest } from './../static/path-rest';
-import { MessageService } from './message.service';
+import { MessageService } from '../services/message.service';
+@Injectable()
+export class AnimeInterceptor2 implements HttpInterceptor {
+	constructor(private messageService: MessageService) {}
 
-@Injectable({
-	providedIn: 'root'
-})
-export class AuthService {
-	constructor(private http: HttpClient, private messageService: MessageService) {}
-	//CHIKIS EN EL VIDEO POR ERROR PUSE EL MISMO MODELO DE DATOS COMO "RESPUESTA" PERO DEBERIA SER "IRLogin", MIL DISCULPAS
-	login(login: IRQLogin): Observable<IRLogin> {
-		return this.http.post<IRLogin>(PathRest.GET_LOGIN, login);
+	intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+		console.log('*********INTERCEPTOR2********', req);
+		return next.handle(req);
 	}
-
-	/**
-	 * Se esta comentando esta sección ya que ahora los errores se manejaran desde el Interceptor
-	 */
 
 	// herrorHandler(error: HttpErrorResponse): Observable<never> {
 	// 	if (error instanceof HttpErrorResponse) {
