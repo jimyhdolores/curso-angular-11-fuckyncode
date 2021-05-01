@@ -117,15 +117,12 @@ https://youtube.com/playlist?list=PLy09ETjgu8VqSJgZXiiL-pSg4g1xbowGE
 Suscríbete a mi canal 😎
 www.youtube.com/c/fuckynCode
 
-Sígueme en mis redes:
-Facebook : www.facebook.com/fukyncode  
+**Sígueme en mis redes:**
+👉Facebook : https://facebook.com/fukyncode
 búscame como: @fukyncode
-
-Instagram: www.instagram.com/jimyhdolores/  
-búscame como: @jimyhdolores
-
-Twitter: twitter.com/jimyHDolores  
+👉Instagram: https://instagram.com/jimyhdolores/
+búscame como:  @jimyhdolores
+👉Twitter: https://twitter.com/jimyHDolores
 búscame como: @jimyHDolores
-
-LinkedIn: www.linkedin.com/in/jimyhuachodolores/  
+👉LinkedIn:https://linkedin.com/in/jimyhuachodolores/
 búscame como: @jimyhuachodolores
