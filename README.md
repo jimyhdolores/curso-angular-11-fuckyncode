@@ -1,5 +1,7 @@
 # Curso Angular 11
 
+# CONFIGURACIÓN INICIAL
+
 Hola Chikis este sera el repositorio donde aprenderemos angular 11, si quieres saber más a detalle ingresa a mi canal y revisa el código, gracias. 😎
 https://www.youtube.com/c/fuckynCode
 
