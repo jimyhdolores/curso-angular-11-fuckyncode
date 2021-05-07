@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IAnime } from './../models/auth';
+import { IAnime } from '../models/animes';
 import { TypeAnime } from './../models/types';
 import { PathRest } from './../static/path-rest';
 

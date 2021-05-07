@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Evolutions</h1>
+<div mat-dialog-content>
+	<div class="container">
+		<app-anime *ngFor="let item of listPokemons" [anime]="item"> </app-anime>
+	</div>
+</div>
+<div mat-dialog-actions>
+	<button mat-button mat-dialog-close>Close</button>
+</div>

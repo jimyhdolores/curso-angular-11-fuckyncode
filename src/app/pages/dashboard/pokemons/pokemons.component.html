@@ -1,2 +1,4 @@
 <h1>Pokemons</h1>
-<app-anime> </app-anime>
+<div class="container">
+	<app-anime *ngFor="let item of listPokemons" [anime]="item"> </app-anime>
+</div>

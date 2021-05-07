@@ -1,12 +1,12 @@
 <mat-card class="container">
-	<img mat-card-image src="" alt="" />
+	<img mat-card-image [src]="anime.ulrImg" alt="" />
 	<mat-card-content>
 		<div class="container__anime">
-			<h2></h2>
-			<span></span>
+			<h2>{{ anime.name }}</h2>
+			<span>{{ anime.description }} </span>
 		</div>
 	</mat-card-content>
-	<mat-card-actions>
+	<mat-card-actions *ngIf="anime.evolutions">
 		<button mat-button color="primary" (click)="clickEvolutions()">Evolutions</button>
 	</mat-card-actions>
 </mat-card>
