@@ -13,7 +13,7 @@ export const routes: Routes = [
 		component: RegisterPageComponent
 	},
 	{
-		path: 'dashboard', // /dashboard -> ''
+		path: 'dashboard',
 		loadChildren: () => import('./pages/page.module').then((m) => m.PageModule)
 	},
 	{
