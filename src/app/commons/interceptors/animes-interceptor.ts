@@ -14,8 +14,7 @@ import { PathRest } from './../static/path-rest';
 export class AnimeInterceptor implements HttpInterceptor {
 	constructor(private messageService: MessageService) {}
 
-	intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-		console.log('*********INTERCEPTOR1********', req);
+	intercept(req: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 		const token = localStorage.getItem('acces_token')!;
 		let requestClone = req;
 

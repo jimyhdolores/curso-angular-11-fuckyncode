@@ -6,8 +6,7 @@ import { MessageService } from '../services/message.service';
 export class AnimeInterceptor2 implements HttpInterceptor {
 	constructor(private messageService: MessageService) {}
 
-	intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-		console.log('*********INTERCEPTOR2********', req);
+	intercept(req: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 		return next.handle(req);
 	}
 
