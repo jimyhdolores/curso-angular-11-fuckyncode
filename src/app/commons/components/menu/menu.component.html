@@ -9,5 +9,9 @@
 			<mat-icon matListIcon>{{ menu.icon }}</mat-icon>
 			<a routerLinkActive="router-link-active"> {{ menu.name }}</a>
 		</mat-list-item>
+		<mat-list-item role="listitem" (click)="logout()">
+			<mat-icon matListIcon>logout</mat-icon>
+			Logout
+		</mat-list-item>
 	</mat-nav-list>
 </div>
