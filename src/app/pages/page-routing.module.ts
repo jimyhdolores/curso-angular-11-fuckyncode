@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AnimeGuardGuardCanDeactive } from './../commons/guards/anime-guard-candeactive.guard';
+import { AnimeGuardGuardChild } from './../commons/guards/anime-guard-child.guard';
+import { AnimeGuardGuard } from './../commons/guards/anime-guard.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DigimonsComponent } from './dashboard/digimons/digimons.component';
 import { MedabotsComponent } from './dashboard/medabots/medabots.component';
@@ -9,6 +12,8 @@ export const routes: Routes = [
 	{
 		path: '',
 		component: DashboardComponent,
+		canActivate: [AnimeGuardGuard],
+		canActivateChild: [AnimeGuardGuardChild],
 		children: [
 			{
 				path: 'pokemons',
@@ -16,11 +21,13 @@ export const routes: Routes = [
 			},
 			{
 				path: 'digimons',
-				component: DigimonsComponent
+				component: DigimonsComponent,
+				canDeactivate: [AnimeGuardGuardCanDeactive]
 			},
 			{
 				path: 'medabots',
-				component: MedabotsComponent
+				component: MedabotsComponent,
+				canDeactivate: [AnimeGuardGuardCanDeactive]
 			},
 			{
 				path: '',
