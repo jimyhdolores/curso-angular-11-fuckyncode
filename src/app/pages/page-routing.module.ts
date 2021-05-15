@@ -26,8 +26,7 @@ export const routes: Routes = [
 			},
 			{
 				path: 'medabots',
-				component: MedabotsComponent,
-				canDeactivate: [AnimeGuardGuardCanDeactive]
+				component: MedabotsComponent
 			},
 			{
 				path: '',

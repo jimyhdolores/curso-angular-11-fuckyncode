@@ -6,16 +6,26 @@ import {
 	UrlTree
 } from '@angular/router';
 import { Observable } from 'rxjs';
+import { JwtAuthService } from '../services/jwt-auth.service';
+import { MessageService } from './../services/message.service';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class AnimeGuardGuardChild implements CanActivateChild {
+	constructor(private _jwtAuthService: JwtAuthService, private _messageService: MessageService) {}
 	canActivateChild(
 		childRoute: ActivatedRouteSnapshot,
 		state: RouterStateSnapshot
 	): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-		console.log('*********CanActivateChild********');
+		const path = childRoute.routeConfig?.path;
+		if (path === 'medabots' && !this._jwtAuthService.isAdmin()) {
+			this._messageService.showError(
+				'No cuenta con permisos suficientes para poder ingresar',
+				'bottom center'
+			);
+			return false;
+		}
 		return true;
 	}
 }

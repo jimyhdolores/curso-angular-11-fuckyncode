@@ -13,8 +13,6 @@ export class JwtAuthService {
 	}
 
 	isLoggedIn(): boolean {
-		console.log('*****isLoggedIn****');
-
 		const lsRol = localStorage.getItem(LocalStorageJwt.LS_ROLES);
 		if (!lsRol) {
 			return false;
@@ -25,5 +23,13 @@ export class JwtAuthService {
 		}
 
 		return true;
+	}
+
+	isAdmin(): boolean {
+		const lsRol = localStorage.getItem(LocalStorageJwt.LS_ROLES)!;
+		const rolArray = JSON.parse(lsRol) as Array<string>;
+		const rolAdmin = rolArray.find((x) => x === 'ADMIN');
+
+		return rolAdmin !== undefined;
 	}
 }
