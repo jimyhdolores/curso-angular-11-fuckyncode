@@ -5,6 +5,10 @@
 		width: 20em;
 	}
 
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
 	.registrate {
 		color: #007acc;
 		font-size: 18px;
