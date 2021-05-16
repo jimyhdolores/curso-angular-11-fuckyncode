@@ -22,7 +22,7 @@ export class AnimeGuardGuardChild implements CanActivateChild {
 		if (path === 'medabots' && !this._jwtAuthService.isAdmin()) {
 			this._messageService.showError(
 				'No cuenta con permisos suficientes para poder ingresar',
-				'bottom center'
+				'top right'
 			);
 			return false;
 		}
