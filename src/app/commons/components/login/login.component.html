@@ -2,23 +2,55 @@
 	<div>
 		<img src="assets/img/logo-fuckyncode-boom.png" alt="funckyn code" />
 	</div>
-	<mat-form-field appearance="outline">
-		<mat-label>User Name</mat-label>
-		<input matInput placeholder="Placeholder" [(ngModel)]="userName" />
-		<mat-icon class="material-icons-outlined" matSuffix>account_circle_outline</mat-icon>
-	</mat-form-field>
-	<mat-form-field appearance="outline">
-		<mat-label>Password</mat-label>
-		<input type="password" matInput placeholder="Placeholder" [(ngModel)]="password" />
-		<mat-icon matSuffix>password</mat-icon>
-	</mat-form-field>
+	<form class="container__form" #myFormLogin="ngForm">
+		<mat-form-field appearance="outline">
+			<mat-label>User Name</mat-label>
+			<input
+				matInput
+				placeholder="Placeholder"
+				name="username"
+				[(ngModel)]="dataLoginForm.userName"
+				required
+				#uservalid="ngModel"
+			/>
+			<mat-icon class="material-icons-outlined" matSuffix>account_circle_outline</mat-icon>
+			<mat-error *ngIf="uservalid.invalid && uservalid.errors?.required">
+				El usuario es requerido
+			</mat-error>
+		</mat-form-field>
+		<mat-form-field appearance="outline">
+			<mat-label>Password</mat-label>
+			<input
+				type="password"
+				matInput
+				placeholder="Placeholder"
+				name="password"
+				[(ngModel)]="dataLoginForm.password"
+				required
+				#userPassword="ngModel"
+			/>
+			<mat-icon matSuffix>password</mat-icon>
+			<mat-error *ngIf="userPassword.invalid && userPassword.errors?.required">
+				La contraseña es requerida
+			</mat-error>
+		</mat-form-field>
 
-	<button mat-raised-button color="primary" (click)="clickLogin()">Login</button>
-	<label
-		routerLinkActive="router-link-active"
-		class="registrate"
-		routerLinkActive="router-link-active"
-		(click)="onClickRegister()"
-		>Register</label
-	>
+		<button
+			mat-raised-button
+			color="primary"
+			[disabled]="!myFormLogin.valid"
+			(click)="clickLogin()"
+		>
+			Login
+		</button>
+		<label
+			routerLinkActive="router-link-active"
+			class="registrate"
+			routerLinkActive="router-link-active"
+			(click)="onClickRegister()"
+			>Register</label
+		>
+	</form>
+
+	<pre>{{ myFormLogin.value | json }} </pre>
 </div>
