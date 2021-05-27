@@ -18,6 +18,13 @@
 				"plugin:prettier/recommended"
 			],
 			"rules": {
+				"@typescript-eslint/no-non-null-assertion": "off",
+				"@typescript-eslint/unbound-method": [
+					"error",
+					{
+						"ignoreStatic": true
+					}
+				],
 				"@angular-eslint/component-selector": [
 					"error",
 					{
