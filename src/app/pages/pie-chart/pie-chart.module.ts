@@ -1,7 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 import { PieChartComponent } from './pie-chart.component';
-import { Routes, RouterModule } from '@angular/router';
+
 const routes: Routes = [
 	{
 		path: '',
@@ -10,7 +13,7 @@ const routes: Routes = [
 ];
 @NgModule({
 	declarations: [PieChartComponent],
-	imports: [CommonModule, RouterModule.forChild(routes)],
+	imports: [CommonModule, NgxChartsModule, RouterModule.forChild(routes)],
 	exports: [PieChartComponent]
 })
 export class PieChartModule {}
