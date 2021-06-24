@@ -38,7 +38,6 @@ Configuración para los archivos TS:
 				"eslint:recommended",
 				"plugin:@typescript-eslint/recommended",
 				"plugin:@typescript-eslint/recommended-requiring-type-checking",
-				"prettier/@typescript-eslint",
 				"plugin:prettier/recommended"
 			]
 ```
@@ -47,9 +46,8 @@ Configuración para los archivos HTML:
 
 ```json
 	"extends": [
-				"plugin:@angular-eslint/template/recommended",
-				"prettier/@typescript-eslint",
-				"plugin:prettier/recommended"
+  "plugin:@angular-eslint/template/recommended", 
+  "plugin:prettier/recommended"
 			],
 ```
 
