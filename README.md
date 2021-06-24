@@ -92,7 +92,7 @@ src/environments/*.ts
 Si no se llega a ejecutar Husky al momento de realizar un commit a pesar de que ya agregaste las configuraciones, es debido a la actualización de la librería, para poder solucionar este problema desinstala husky y vuelve a instalar de la siguiente manera:
 
 ```
-npm i -D husky@4.3.7
+npm i -D husky@4.3.7 -E
 ```
 
 Husky en su versión actual maneja los Hooks de git de una manera muy distinta a lo que presento en el video y a mi parecer lo complicaron todo, prefiero esta manera de trabajar, más información en: https://typicode.github.io/husky/#/
