@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -8,6 +8,7 @@ import { TotalModule } from './../total/total.module';
 import { OptionsTvComponent } from './options-tv.component';
 
 @NgModule({
+	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 	imports: [
 		CommonModule,
 		FormsModule,

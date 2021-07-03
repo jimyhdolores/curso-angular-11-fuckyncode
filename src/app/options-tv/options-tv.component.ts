@@ -16,11 +16,10 @@ export class OptionsTvComponent {
 	optionsTv: ITv = <ITv>{};
 
 	constructor(private calculateService: CalculateService) {}
-	// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-	handleChangeComplete($event: ColorEvent) {
+
+	handleChangeComplete(event: ColorEvent): void {
 		// const color = ($event as unknown) as ColorEvent;
-		console.log($event.color);
-		// console.log($event.color);
+		console.log(event.color);
 	}
 	changeTamanio(): void {
 		this.sendOptionTv();
