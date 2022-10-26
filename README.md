@@ -3,7 +3,7 @@
 # CONFIGURACIÓN INICIAL
 
 Hola Chikis este sera el repositorio donde aprenderemos angular 11, si quieres saber más a detalle ingresa a mi canal y revisa el código, gracias. 😎
-https://www.youtube.com/c/fuckynCode
+https://www.youtube.com/c/LogiDev
 
 ## Migracion TSLint a ESLint Angular < v12
 
@@ -147,11 +147,11 @@ Suscríbete a mi canal 😎
 www.youtube.com/c/fuckynCode
 
 **Sígueme en mis redes:**
-👉Facebook : https://facebook.com/fukyncode  
-búscame como: @fukyncode  
+👉Facebook : https://facebook.com/LogiDev  
+búscame como: @LogiDev
 👉Instagram: https://instagram.com/jimyhdolores/  
 búscame como:  @jimyhdolores  
 👉Twitter: https://twitter.com/jimyHDolores  
 búscame como: @jimyHDolores  
-👉LinkedIn:https://linkedin.com/in/jimyhuachodolores/  
+👉LinkedIn: https://linkedin.com/in/jimyhuachodolores/  
 búscame como: @jimyhuachodolores  
